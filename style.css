@@ -4,6 +4,7 @@
     font-size: 16px;  /* Make the font larger */
     padding: 5px;   /* Add padding for better spacing */
 }
+
 .nv_item {
     font-family: Arial, Helvetica, sans-serif;
     width: 49px;
@@ -60,24 +61,41 @@ header img {
 .left{
 	margin-right: 250px;
 }
-.exam_names{
-  	background-color: #38a9eb;
-  	color: #FFFFFF;
-  	padding: 7px 15px 7px 15px;
-  	width: auto;
-  	display: inline-block;
-  	font-size: 13px;
-  	font-family: arial,verdana,helvetica,sans-serif;
-	border: 1px solid #38a9eb;
+.exam_header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the space between buttons */
 }
-#exam_name{
-	background-color: #eeeeee;
-	padding: 10px 20px 10px 20px;
+.exam_names{
+    background-color: #38a9eb;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 1px;
+}
+
+#downloadPdfButton {
+    background-color: #38a9eb;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#downloadPdfButton:hover {
+    background-color: #125f8c;
 }
 #time{
 	border-bottom: 1px solid #c3c3c1;
     font-size: 12px;
-	padding: 8px 10px 8px 10px;
+	padding: 1px 10px 6px 10px;
 	overflow: auto;
 }
 #time_left{
@@ -483,15 +501,14 @@ header img {
 
 /* Styles for MCQ images */
 .mcq-image {
-	margin: 10px;
-    height: 600px;
-    width: 500px;
+    height: 585px;
+    width: 450px;
 }
 
 /* Styles for numerical question images */
 .numerical-image {
     height: 300px;
-    width: 530px;
+    width: 600px;
 }
 
 /* #q1{
@@ -599,7 +616,67 @@ body {
 	font-size: 15px;
 	margin: 15px;
 	padding: 15px;
-	background-color: #fff;
+	background-color: #fff;	
+}
+#general_instructions {
+    padding: 20px;
+    margin: 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+}
 
-	
+#general_instructions h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+#general_instructions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#general_instructions li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #444;
+    padding-left: 20px;
+    position: relative;
+}
+
+#general_instructions li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+}
+
+.instructions-container {
+    position: relative;
+    margin: 20px;
+}
+
+#toggle-instructions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: #38a9eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#toggle-instructions:hover {
+    background-color: #2980b9;
+}
+
+.instructions-hidden #general_instructions {
+    display: none;
 }
